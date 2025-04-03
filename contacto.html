@@ -6,14 +6,55 @@
         <title>Formulario de contacto</title>
     </head>
     <body>
-        <h1>Formulario de Contacto</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
-            labore sunt, fugit laudantium mollitia perspiciatis inventore,
-            dolorem, fugiat libero cum aut sed doloremque molestias ipsam! Odit,
-            doloribus a. Distinctio, sint?</p>
-
+        <h1>Contacto</h1>
         <br>
-        
-        <br>
+        <h2>¡Contactanos para cualquier consulta o comentario!</h2>
+        <form action="https://www.w3schools.com/action_page.php" method="post" novalidate>
+            <fieldset>
+                <legend>Información Personal</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" placeholder="Ingrese su nombre" required><br><br>
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" name="email" required><br><br>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" name="telefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"><br><br>
+                <label for="fecha_nac">Fecha de Nacimiento:</label>
+                <input type="date" name="fecha_nac" id="fecha_nac"><br><br>
+                <label for="color_fav">Color Favorito:</label>
+                <input type="color" name="color_fav"><br><br>
+                <label for="rango_edad">Rango de Edad:</label>
+                <input type="range" name="rango_edad" min="18" max="100" step="1"><br><br>
+                <label for="hora_preferida">Hora prefereida:</label>
+                <input type="time" name="hora_preferida"><br><br>
+                <label for="archivo">Adjuntar archivo:</label>
+                <input type="file" name="archivo"><br><br>
+                <label for="url">URL:</label>
+                <input type="url" name="url"><br><br>
+            </fieldset>
+            <fieldset>
+                <legend>Mensaje</legend>
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea name="mensaje" rows="4" cols="50"></textarea><br><br>
+                <label for="motivo">Motivo de Contacto:</label><br>
+                <select name="motivo" id="motivo">
+                    <option value="consulta">Consulta</option>
+                    <option value="comentario">Comentario</option>
+                    <option value="sugerencia">Sugerencia</option>
+                    <option value="otro">Otro</option>
+                </select><br><br>
+                <label>
+                    <input type="checkbox" name="acepto_term" value="acepto">Acepto los términos y condiciones
+                </label><br></br>
+                <p>Género:</p>
+                <label>
+                    <input type="radio" name="genero" value="masculino">Masculino
+                </label>
+                <label>
+                    <input type="radio" name="genero">Femenino
+                </label><br></br>
+            </fieldset>
+            <input type="submit" value="Enviar" target="_blank">
+            <input type="reset" value="Borrar">
+        </form>
     </body>
 </html>
